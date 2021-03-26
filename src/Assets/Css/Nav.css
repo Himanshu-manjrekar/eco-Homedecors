@@ -1,0 +1,36 @@
+.navbar {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-brand {
+    background: #BB7A40;
+    padding: 15px 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__logo {
+    padding: 0 25px 0 25px;
+}
+
+.Nav__text h3{
+    color: #fff;
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+}
+
+.Nav__text h5 {
+    color: #fff;
+    font-size: 0.9rem;
+    margin: 0;
+    text-align: center;
+}
+
+.nav-item {
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
