@@ -1,19 +1,22 @@
 import React from "react";
 import "../Assets/Css/Nav.css";
-import logo from '../Assets/Images/logo.png'
-
+import logo from '../Assets/Images/logo.png';
+import { NavLink } from 'react-router-dom';
+import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa'
+import Navitem from "./reusablecomponents/NavItem";
+ 
 const Navbar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div className="container">
-          <a className="navbar-brand" href="#">
+          <NavLink className="navbar-brand" to="/">
             <img src={logo} className="nav__logo" alt=""/>
             <div className="Nav__text">
                 <h3>eco</h3>
                 <h5>Home Decors</h5>
             </div>
-          </a>
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -27,75 +30,18 @@ const Navbar = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 ms-lg-auto mb-lg-0">
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  About
-                </a>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Action
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Another action
-                    </a>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Something else here
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Services
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Products
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Blog
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Contact
-                </a>
-              </li>
+              <Navitem page="Home" active={true} to="/"/>
+              <Navitem page="About" active={true} to="/About"/>
+              <Navitem page="Services" active={true} to="/Services"/>
+              <Navitem page="Products" active={true} to="/Products"/>
+              <Navitem page="Blog" active={true} to="/Blog"/>
+              <Navitem page="Contact" active={true} to="/Contact"/>
             </ul>
-            <form className="d-flex">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
+            <div className="social__icons d-flex">
+            <FaFacebookF className="icon"/>
+            <FaTwitter  className="icon"/>
+            <FaInstagram  className="icon"/>
+            </div>
           </div>
         </div>
       </nav>

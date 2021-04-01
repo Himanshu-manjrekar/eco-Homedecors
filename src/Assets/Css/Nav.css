@@ -32,5 +32,56 @@
 
 .nav-item {
     font-size: 1.2rem;
-    margin-right: 10px;
+    margin: 18px;
+    
+}
+.nav-link {
+    transition: all 0.3s ease-in;
+}
+
+.nav-link:hover {
+    color: #BB7A40 !important;
+}
+
+.icon { 
+    color: #000;
+    margin-left: 15px;
+    transition: all 0.2s ease-in;
+}
+
+.icon:hover {
+    color: #BB7A40;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .nav-item {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+    .icon {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 990px) {
+    .nav-item {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+    .icon {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    .icon {
+        display: flex;
+        flex-direction: column;
+    }
 }
