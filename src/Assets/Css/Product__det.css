@@ -1,0 +1,35 @@
+.card__para p{
+    margin-bottom: 50px;
+}
+
+.btn-secondary {
+    /* background-color: #BB7a40; */
+    background: #fff;
+    color: #333 !important;
+    /* border: 1px solid #BB7a40 !important; */
+    border: 2px solid #eae8e6 !important;
+    border-radius: 5px;
+    font-family: 'PT Serif', serif;
+    transition:  0.2s ease-in;
+    margin-bottom: 20px;
+}
+
+.btn-secondary:hover {
+    background-color: #fff;
+    border: 1px solid #BB7a40 !important;
+    color: #BB7a40;
+}
+
+.testimonial__credit {
+    color: #fff;
+    font-size: 15px;
+}
+
+.testi_img img{
+    border-radius: 50%;
+}
+
+.quote {
+    color: #BB7a40;
+    font-size: 1.5rem;
+}

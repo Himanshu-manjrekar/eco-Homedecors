@@ -1,0 +1,53 @@
+/* [1] The container */
+.img-hover-zoom {
+    overflow: hidden; 
+    position: relative;
+}
+  
+.img-hover-zoom img {
+    width: 100%;
+    height: 25rem;
+    transition: all .5s ease;
+    background: rgba(0, 0, 0, 0.80);
+    opacity: 0.3;
+    z-index: -1;
+}
+  
+.img-hover-zoom:hover img {
+    transform: scale(1.2);
+}
+
+.centered-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 0.2s ease-in;
+}
+.centered-text h2 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.centered-text p {
+    color: #a8a8a8;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-hover-zoom:hover .centered-text{
+   margin-top: -2rem;
+}
+
+.img-hover-zoom:hover img {
+    background: rgba(0, 0, 0);
+    opacity:0.2 ;
+}
+
+.img-hover-zoom:hover .centered-text .h2 {
+    color: #fff;
+}
